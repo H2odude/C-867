@@ -1,2 +1,7 @@
 ﻿  roster.cpp
-  C-867.vcxproj -> D:\school\x64\Debug\C-867.exe
+d:\school\c-867\roster.cpp(59): error C2110: '+': cannot add two pointers
+  student.cpp
+d:\school\c-867\student.cpp(67): error C2556: 'int student::GetDaysForCourse(int) const': overloaded function differs only by return type from 'int *student::GetDaysForCourse(int) const'
+  d:\school\c-867\student.h(49): note: see declaration of 'student::GetDaysForCourse'
+d:\school\c-867\student.cpp(67): error C2040: 'student::GetDaysForCourse': 'int (int) const' differs in levels of indirection from 'int *(int) const'
+  Generating Code...

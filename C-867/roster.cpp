@@ -54,6 +54,8 @@ void Roster::printDaysInCourse(string studentID) {
 	for (int i = 0; i < numStudents; i++) {
 		if ((*classRosterArray[i]).GetStudentID() == studentID) {
 			int average = 0;
+			//int DAYONE = (*classRosterArray[i]).GetDaysForCourse(0);
+
 			average = ((*classRosterArray[i]).GetDaysForCourse(0) + (*classRosterArray[i]).GetDaysForCourse(1) + (*classRosterArray[i]).GetDaysForCourse(2)) / courseDays;
 			cout << "The average days for Student " << studentID << " to finish last three courses: " << average << endl;
 		}
@@ -77,12 +79,13 @@ void Roster::printInvalidEmails() {
 			if (c == '.') {
 				foundPERIOD = true;
 			}
-			if (foundPERIOD == true || foundSPACE == true || foundATSIGN == true) {
-				cout << "Email address: " << (*classRosterArray[i]).GetEmailAddress() << "is not valid" << endl;
 			
 			}
+		if (foundPERIOD == false || foundSPACE == true || foundATSIGN == false) {
+			cout << "Email address: " << (*classRosterArray[i]).GetEmailAddress() << " is not valid" << endl;
+
 		}
-	return;
+		
 	}
 }
 
