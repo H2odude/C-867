@@ -63,11 +63,9 @@ int student::GetAge() const
 	return age;
 }
 
-int student::GetDaysForCourse() const
+int student::GetDaysForCourse(int index) const
 {
-	return daysforCourses[0];
-	return daysforCourses[1];
-	return daysforCourses[2];
+	return daysforCourses[index];
 }
 
 	student::student () {

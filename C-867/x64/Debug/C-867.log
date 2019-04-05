@@ -1,3 +1,8 @@
-﻿  roster.cpp
-d:\school\c-867\roster.cpp(61): error C3867: 'student::GetDaysForCourse': non-standard syntax; use '&' to create a pointer to member
-d:\school\c-867\roster.cpp(61): error C2109: subscript requires array or pointer type
+﻿  networkStudent.cpp
+  roster.cpp
+d:\school\c-867\roster.cpp(66): warning C4101: 'foundATSIGN': unreferenced local variable
+  securityStudent.cpp
+  softwareStudent.cpp
+  student.cpp
+  Generating Code...
+d:\school\c-867\roster.cpp(70): error C4700: uninitialized local variable 'i' used

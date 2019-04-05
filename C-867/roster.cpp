@@ -11,8 +11,7 @@
 
 using namespace std;
 
-class classRoster : public Roster {};
-//Roster::Roster() {};
+Roster::Roster() {};
 Roster::~Roster() {};
 
 void Roster::add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, degree Major) {
@@ -55,19 +54,15 @@ void Roster::printDaysInCourse(string studentID) {
 	for (int i = 0; i < numStudents; i++) {
 		if ((*classRosterArray[i]).GetStudentID() == studentID) {
 			int average = 0;
-			//int DAYONE = (*classRosterArray[i]).GetDaysForCourse[0];
-			//int DAYTWO = (*classRosterArray[i]).GetDaysForCourse[1];
-			//int DAYTHREE = (*classRosterArray[i]).GetDaysForCourse[2];
-			average = ((*classRosterArray[i]).GetDaysForCourse[0] + (*classRosterArray[i]).GetDaysForCourse[1] + (*classRosterArray[i]).GetDaysForCourse[2]) / courseDays;
-			//average = (DAYONE + DAYTWO + DAYTHREE) / courseDays;
+			average = ((*classRosterArray[i]).GetDaysForCourse(0) + (*classRosterArray[i]).GetDaysForCourse(1) + (*classRosterArray[i]).GetDaysForCourse(2)) / courseDays;
 			cout << "The average days for Student " << studentID << "to finish last three courses: " << average << endl;
 		}
 	}
 }
 
 void Roster::printInvalidEmails() {
-	int i;
-	for (int i = 0; i < numStudents; i++)
+
+	for (int i = 0; i < numStudents; i++){
 		bool foundATSIGN;
 		bool foundATSIGN = false;
 		bool foundSPACE = false;

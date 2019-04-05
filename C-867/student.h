@@ -46,7 +46,7 @@ public:
 	string GetLastName() const;
 	string GetEmailAddress() const;
 	int GetAge() const;
-	int GetDaysForCourse() const;
+	int GetDaysForCourse(int) const;
 
 
 	//contructors and destructor

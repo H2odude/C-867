@@ -8,7 +8,7 @@ degree securityStudent::getDegreeProgram()
 
 void securityStudent::Print()
 {
-	//cout << "Student ID: " << studentID;
+		//cout << "Student ID: " << ;
 		//cout << "First Name: " << firstName;
 		//cout << "Last Name: " << lastName;
 		//cout << "E-mail Address: " << emailAddress;

@@ -31,6 +31,7 @@ public:
 	void printInvalidEmails();
 	void printByDegreeProgram(degree Major);
 	int Index = 0;
+	Roster();
 	~Roster();
 private:
 	int courseDays = 3;
