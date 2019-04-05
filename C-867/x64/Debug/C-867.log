@@ -1,0 +1,5 @@
+﻿  roster.cpp
+d:\school\c-867\roster.cpp(14): error C2600: 'Roster::Roster': cannot define a compiler-generated special member function (must be declared in the class first)
+d:\school\c-867\roster.cpp(61): error C3867: 'student::GetDaysForCourse': non-standard syntax; use '&' to create a pointer to member
+d:\school\c-867\roster.cpp(61): error C2109: subscript requires array or pointer type
+d:\school\c-867\roster.cpp(107): error C2264: 'Roster::Roster': error in function definition or declaration; function not called
