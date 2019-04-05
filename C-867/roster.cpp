@@ -54,6 +54,8 @@ void Roster::printDaysInCourse(string studentID) {
 	for (int i = 0; i < numStudents; i++) {
 		if ((*classRosterArray[i]).GetStudentID() == studentID) {
 			int average = 0;
+			//int DAYONE = (*classRosterArray[i]).GetDaysForCourse(0);
+
 			average = ((*classRosterArray[i]).GetDaysForCourse(0) + (*classRosterArray[i]).GetDaysForCourse(1) + (*classRosterArray[i]).GetDaysForCourse(2)) / courseDays;
 			cout << "The average days for Student " << studentID << " to finish last three courses: " << average << endl;
 		}
@@ -61,6 +63,7 @@ void Roster::printDaysInCourse(string studentID) {
 }
 
 void Roster::printInvalidEmails() {
+	cout << "Printing invalid Email address':" << endl;
 
 	for (int i = 0; i < numStudents; i++) {
 		bool foundATSIGN = false;
@@ -77,19 +80,21 @@ void Roster::printInvalidEmails() {
 			if (c == '.') {
 				foundPERIOD = true;
 			}
-			if (foundPERIOD == true || foundSPACE == true || foundATSIGN == true) {
-				cout << "Email address: " << (*classRosterArray[i]).GetEmailAddress() << "is not valid" << endl;
 			
 			}
+		if (foundPERIOD == false || foundSPACE == true || foundATSIGN == false) {
+			cout << "Email address: " << (*classRosterArray[i]).GetEmailAddress() << " is not valid" << endl;
+
 		}
-	return;
+		
 	}
+	cout << endl;
 }
 
 void Roster::printByDegreeProgram(degree Major) {
 	for (int i = 0; i < numStudents; i++) {
-		if (classRosterArray[i]->getDegreeProgram() == Major) {
-			classRosterArray[i]->Print();
+		if ((*classRosterArray[i]).getDegreeProgram() == Major) {
+			(*classRosterArray[i]).Print();
 		}
 	}
 }
@@ -100,6 +105,7 @@ int main() {
 	cout << "C++" << endl;
 	cout << "000868408" << endl;
 	cout << "Eric Waters" << endl;
+	cout << endl;
 
 	Roster classRoster;
 
@@ -135,7 +141,7 @@ int main() {
 
 	classRoster.printDaysInCourse("A5");
 
-	classRoster.printByDegreeProgram(SOFTWARE);
+	classRoster.printByDegreeProgram(SECURITY);
 
 	classRoster.remove("A3");
 

@@ -69,15 +69,6 @@ int student::GetDaysForCourse(int index) const
 }
 
 	student::student () {
-		//this->studentID = "";
-		//this->firstName = "";
-		//this->lastName = "";
-		//this->emailAddress = "";
-		//this->age = 0;															//FIX ME
-		//this->daysforCourses = new[daysforCourses];
-		// initialize daysforCourses array
-		//for (int i = 0; i<courseDays; i++) this->daysforCourses[i] = 0;
-		//degreeType;
 	}
 
 	student::student(string student_id, string f_name, string l_name, string email_address, int AGE, int* DaysForCourses) {
@@ -92,13 +83,6 @@ int student::GetDaysForCourse(int index) const
 	};
 
 	void student::Print() {
-		//cout << "Student ID: " << studentID;
-		//cout << "First Name: " << firstName;
-		//cout << "Last Name: " << lastName;
-		//cout << "E-mail Address: " << emailAddress;
-		//cout << "Age: " << age;
-		//cout << "Days to complete 3 Courses: " << daysforCourses;
-		//cout << "Degree: " << degreeType;
 	};
 
 	degree student::getDegreeProgram() {
@@ -106,7 +90,5 @@ int student::GetDaysForCourse(int index) const
 	}
 
 
-	student::~student()
-	{
-
+	student::~student() {
 	};
