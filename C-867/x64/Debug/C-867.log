@@ -1,8 +1,2 @@
-﻿  networkStudent.cpp
-  roster.cpp
-d:\school\c-867\roster.cpp(66): warning C4101: 'foundATSIGN': unreferenced local variable
-  securityStudent.cpp
-  softwareStudent.cpp
-  student.cpp
-  Generating Code...
-d:\school\c-867\roster.cpp(70): error C4700: uninitialized local variable 'i' used
+﻿  roster.cpp
+  C-867.vcxproj -> D:\school\x64\Debug\C-867.exe

@@ -34,7 +34,7 @@ void student::SetAge(int AGE)
 void student::SetDaysForCourse(int[courseDays])
 {
 	for (int i = 0; i < courseDays; i++) {
-		daysforCourses[i] = daysforCourses[i];
+		daysforCourses[i] = daysforCourses[i]; //fix me
 	}
 }
 
