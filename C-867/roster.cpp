@@ -28,36 +28,31 @@ void Roster::add(string studentID, string firstName, string lastName, string ema
 }
 
 void Roster::remove(string studentID) {
-	bool REMOVED = false;
-	for (int i = 0; i < numStudents; i++) {
+	for (int i = 0; i < 5; i++) {
 		if (classRosterArray[i] != NULL) {
-			if (studentID == (*classRosterArray[i]).GetStudentID()) {
+			if (studentID == (classRosterArray[i])->GetStudentID()) {
 				classRosterArray[i] = nullptr;
-				REMOVED = true;
+				return;
 			}
 		}
 	}
-	if (REMOVED = false) {
-	cout << "The student ID: " << studentID << "was not found." << endl;
-	}
-	else
-	cout << "The student ID: " << studentID << " was removed." << endl;
+	cout << "The student ID: " << studentID << " was not found." << endl;
 	cout << endl;
 }
 
 void Roster::printAll() {
 	cout << "Displaying Student Roster:" << endl;
-	for (int i = 0; i < numStudents; i++) {
-		(*classRosterArray[i]).Print();
+	for (int i = 0; i < 5; i++) {
+		(classRosterArray[i])->Print();
 	}
 	cout << endl;
 }
 
 void Roster::printDaysInCourse(string studentID) {
-	for (int i = 0; i < numStudents; i++) {
-		if ((*classRosterArray[i]).GetStudentID() == studentID) {
+	for (int i = 0; i < 5; i++) {
+		if ((classRosterArray[i])->GetStudentID() == studentID) {
 			int average = 0;
-			average = ((*classRosterArray[i]).GetDaysForCourse(0) + (*classRosterArray[i]).GetDaysForCourse(1) + (*classRosterArray[i]).GetDaysForCourse(2)) / courseDays;
+			average = ((classRosterArray[i])->GetDaysForCourse(0) + (classRosterArray[i])->GetDaysForCourse(1) + (classRosterArray[i])->GetDaysForCourse(2)) / 3;
 			cout << "The average days for Student " << studentID << " to finish last three courses: " << average << endl;
 		}
 	}
@@ -67,11 +62,11 @@ void Roster::printDaysInCourse(string studentID) {
 void Roster::printInvalidEmails() {
 	cout << "Printing invalid Email address':" << endl;
 
-	for (int i = 0; i < numStudents; i++) {
+	for (int i = 0; i < 5; i++) {
 		bool foundATSIGN = false;
 		bool foundSPACE = false;
 		bool foundPERIOD = false;
-		string email = ((*classRosterArray[i]).GetEmailAddress());
+		string email = ((classRosterArray[i])->GetEmailAddress());
 		for (char &c : email) {
 			if (c == '@') {
 				foundATSIGN = true;
@@ -85,7 +80,7 @@ void Roster::printInvalidEmails() {
 			
 			}
 		if (foundPERIOD == false || foundSPACE == true || foundATSIGN == false) {
-			cout << "Email address: " << (*classRosterArray[i]).GetEmailAddress() << " is not valid" << endl;
+			cout << "Email address: " << (classRosterArray[i])->GetEmailAddress() << " is not valid" << endl;
 
 		}
 		
@@ -94,10 +89,10 @@ void Roster::printInvalidEmails() {
 }
 
 void Roster::printByDegreeProgram(degree Major) {
-	cout << "Printing students in " << Major << " Program" << endl;
-	for (int i = 0; i < numStudents; i++) {
-		if ((*classRosterArray[i]).getDegreeProgram() == Major) {
-			(*classRosterArray[i]).Print();
+	cout << "Printing students in Software Program:" << endl;
+	for (int i = 0; i < 5; i++) {
+		if ((classRosterArray[i])->getDegreeProgram() == Major) {
+			(classRosterArray[i])->Print();
 		}
 	}
 	cout << endl;
@@ -113,9 +108,10 @@ int main() {
 
 	Roster classRoster;
 
+
 	degree Major;
 
-	for (int i = 0; i < numStudents; i++) {
+	for (int i = 0; i < 5; i++) {
 		stringstream ss(studentData[i]);
 
 		vector<string> INPUT;
@@ -143,16 +139,18 @@ int main() {
 
 	classRoster.printInvalidEmails();
 
-	classRoster.printDaysInCourse("A5");
+	for (int i = 0; i < 5; i++) {
+		classRoster.printDaysInCourse((classRoster.classRosterArray[i])->GetStudentID());
+	}
 
-	classRoster.printByDegreeProgram(SECURITY);
+	classRoster.printByDegreeProgram(SOFTWARE);
 
 	classRoster.remove("A3");
 
 	classRoster.remove("A3");
-
-	(classRoster.~Roster());
 
 	system("pause");
+
 	return 0;
+
 };

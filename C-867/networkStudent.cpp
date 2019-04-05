@@ -14,9 +14,9 @@ void networkStudent::Print()
 	cout << "First Name: " << GetFirstName() << "\t";
 	cout << "Last Name: " << GetLastName() << "\t";
 	cout << "Age: " << GetAge() << "\t";
-	//cout << Days For Courses: {" << daysforCourses[0] << "," << daysforCourses[1] << "," << daysforCourses[2] << "}\t";
+	cout << "Days For Courses: {" << GetDaysForCourse(0) << "," << GetDaysForCourse(1) << "," << GetDaysForCourse(2) << "}\t";
 
-	cout << "Degree Program: " << getDegreeProgram();
+	cout << "Degree Program: Networking" << endl;
 
 	cout << "\n";
 }

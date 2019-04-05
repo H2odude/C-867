@@ -10,9 +10,8 @@
 
 using namespace std;
 
-const int numStudents = 5;
 
-const string studentData[numStudents] =
+const string studentData[5] =
 {
 "A1,John,Smith,John1989@gm ail.com,20,30,35,40,SECURITY",
 "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
@@ -23,7 +22,7 @@ const string studentData[numStudents] =
 
 class Roster {
 public:
-	student *classRosterArray[numStudents] = { nullptr, nullptr, nullptr, nullptr, nullptr };
+	//student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 	void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, degree Major);
 	void remove(string studentID);
 	void printAll();
@@ -34,6 +33,6 @@ public:
 	Roster();
 	~Roster();
 private:
-	int courseDays = 3;
-	int numStudents = 5;
+	
+	student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 };
