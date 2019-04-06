@@ -22,6 +22,9 @@ const string studentData[5] =
 
 class Roster {
 public:
+	student* GetClassRoster(int Index) {
+		return classRosterArray[Index];
+	}
 	//student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 	void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, degree Major);
 	void remove(string studentID);

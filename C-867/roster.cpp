@@ -140,7 +140,7 @@ int main() {
 	classRoster.printInvalidEmails();
 
 	for (int i = 0; i < 5; i++) {
-		classRoster.printDaysInCourse((classRoster.classRosterArray[i])->GetStudentID());
+		classRoster.printDaysInCourse((classRoster.GetClassRoster(i))->GetStudentID());
 	}
 
 	classRoster.printByDegreeProgram(SOFTWARE);
